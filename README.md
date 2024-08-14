@@ -2,11 +2,12 @@
 This is simple contact form that allows users to submit their name,email, specifiv issue and their comments.
 
 # Requirements
-A text input for user’s name
-A text input for user’s email address
-A drop down to select user’s issue (Query, Feedback, Complaint, Other)
-A text area for user’s comment
-The form will post to a second page which will display the information in an easy to read format.
+* Local web server (XAMPP) use for running PHP and to save users data.
+* Knowledge of HTML/CSS for creating the forms.
+* PHP knowledge for handling forms data and saving to database
+* Make the text area a WYSIWYG Bootstrap Editor (Summernote).
+* Validate the input in the email field to ensure it's an email format
+* Make fields required - ensure feedback is given to the user if an input is missing.
 
 # Project structure
 - "index.html": contains the html form.
