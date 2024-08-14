@@ -1,5 +1,5 @@
 # contactform
-This is simple contact form that allows users to submit their name,email, specifiv issue and their comments.
+This is simple contact form that allows users to submit their name,email, specific issue and their comments.
 
 # Requirements
 * Local web server (XAMPP) use for running PHP and to save users data.
