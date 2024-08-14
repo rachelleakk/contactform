@@ -5,37 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple contact form</title>
     <link rel="stylesheet" href="style.css">
+    <!-- booststrap css -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- summernote css -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <!-- summernote js -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <!-- customer css -->
+    <link rel="stylesheet" href="style.css">
 </head>
-    <body><div class="container">
-	<div class="row">
-			<h1>contact us</h1>
-	</div>
-	<div class="row">
-			<h4 style="text-align:center">We'd love to hear from you!</h4>
-	</div>
-	<div class="row input-container">
-			<div class="col-xs-12">
-				<div class="styled-input wide">
-					<input type="text" required />
-					<label>Name</label> 
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="styled-input">
-					<input type="text" required />
-					<label>Email</label> 
-				</div>
-			</div>
-			
-			<div class="col-xs-12">
-				<div class="styled-input wide">
-					<textarea required></textarea>
-					<label>Message</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="btn-lrg submit-btn">Send Message</div>
-			</div>
-	</div>
-</div></body>
+<body>
+  <!-- Form heading -->
+
+  <h1 class="h1-heading">Contact form</h1>
+<p class="p-heading">Fill out this form for any Inquire</p>
+</div>
+
+
+
+<!-- contact form -->
+<form action="nextpage.php" method="post" id="contact-form">
+  <!-- Name input & label -->
+<label for="name"> Enter Your full Name: <input type="text" name="name" id="name" required></label>
+     <!-- email input & label -->
+<label for="email">Enter Your email address <input type="email" name="email" id="email" required></label>
+  <!-- User's Issues and option -->
+<label for="issue"> User's Issue
+  <select name="issue" id="issue">
+      <option value="">(Select one)</option>
+      <option value="Query">Query</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Complaint">Complain</option>
+      <option value="Others">Others</option>
+  </select>
+</label>
+<!-- Comment & label -->
+<label for="comment">Comment here</label>
+<textarea name="comment" id="comment" cols="30" rows="10" required ></textarea>
+<!-- submit button -->
+<input type="submit" id="btn"value="Review your form"></form>
+
+<!-- Js script area that initialise summernote and populate form fields if the URL paramaters exist  -->
+<script>
+  // summernote initialisation for comment area
+    $(document).ready(function() {
+        $('#comment').summernote();
+    });
+
+  // check if URL parameters exist
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.has('name')){
+    // populate the form fields with the URL parameters
+    $('#name').val(urlParams.get('name'));
+    $('#email').val(urlParams.get('email'));
+    $('#issue').val(urlParams.get('issue'));
+    $('#comment').summernote('code', urlParams.get('comment'));
+  }
+  </script>
+</body>
 </html>
