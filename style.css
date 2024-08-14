@@ -1,131 +1,90 @@
-ody {
-    background-color: #444442;
-    padding-top: 85px;
-}
-
-h1 {
-    font-family: 'Poppins', sans-serif, 'arial';
-    font-weight: 600;
-    font-size: 72px;
-    color: white;
-    text-align: center;
-}
-
-h4 {
-    font-family: 'Roboto', sans-serif, 'arial';
-    font-weight: 400;
-    font-size: 20px;
-    color: #9b9b9b;
-    line-height: 1.5;
-}
-
-/* ///// inputs /////*/
-
-input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-    font-size: 0.75em;
-    color: #999;
-    top: -5px;
-    -webkit-transition: all 0.225s ease;
-    transition: all 0.225s ease;
-}
-
-.styled-input {
-    float: left;
-    width: 293px;
-    margin: 1rem 0;
-    position: relative;
-    border-radius: 4px;
-}
-
-@media only screen and (max-width: 768px){
-    .styled-input {
-        width:100%;
-    }
-}
-
-.styled-input label {
-    color: #999;
-    padding: 1.3rem 30px 1rem 30px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    pointer-events: none;
-}
-
-.styled-input.wide { 
-    width: 650px;
-    max-width: 100%;
-}
-
-input,
-textarea {
-    padding: 30px;
-    border: 0;
+body{
     width: 100%;
-    font-size: 1rem;
-    background-color: #2d2d2d;
+    height: 100vh;
+    margin:0;
+    background-color: #004480;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+/* heading and paragraph */
+.h1-heading, .p-heading{
+    margin:1em auto;
+    text-align:center;
+    color:white;
+}
+ /* form */
+#contact-form{
+    width:60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin:0 auto;
+    padding-bottom: 2em;
+}
+ /* form label */
+label{
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
     color: white;
-    border-radius: 4px;
+}
+/* input, textarea and select option */
+#contact-form input, textarea, select{
+    margin:10px 0 0 0;
+    width:100%;
+    min-height: 2em;
+    color: black;
 }
 
-input:focus,
-textarea:focus { outline: 0; }
-
-input:focus ~ span,
-textarea:focus ~ span {
-    width: 100%;
-    -webkit-transition: all 0.075s ease;
-    transition: all 0.075s ease;
+/* input textarea only*/
+input, textarea{
+    background-color:#ffff;
+    border: 1px solid #000000;
 }
 
-textarea {
-    width: 100%;
-    min-height: 15em;
-}
-
-.input-container {
-    width: 650px;
-    max-width: 100%;
-    margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-    float: right;
-    padding: 7px 35px;
-    border-radius: 60px;
-    display: inline-block;
-    background-color: #4b8cfb;
-    color: white;
-    font-size: 18px;
+/* button */
+#btn{
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    font-size: 2.1rem;
     cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
-              0 2px 10px 0 rgba(0,0,0,0.07);
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px 0px;
+    text-shadow: 1px 1px
+}
+/* button hover */
+#btn:hover{
+ background-color:  #cce7ff;
 }
 
-.submit-btn:hover {
-    transform: translateY(1px);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
-              0 1px 1px 0 rgba(0,0,0,0.09);
-}
+/* ......................nextpage.php...........*/
 
-@media (max-width: 768px) {
-    .submit-btn {
-        width:100%;
-        float: none;
-        text-align:center;
-    }
-}
 
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-} 
+/* display container */
 
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
+.display-container{
+    width:600px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    line-height: 30px;
 }
+.display-container p{
+    font-size: xx-large;
+}
+/* edit and save button */
+input[type=submit]{
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+/* hover button */
+input[type=submit]:hover{
+    background-color: #DAE0E6;
+  }
+
+
